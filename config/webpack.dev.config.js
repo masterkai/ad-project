@@ -7,20 +7,20 @@ const webpackConfigBase = require('./webpack.base.config');
 
 const PORT = 8080;
 const webpackConfigDev = {
-  mode: 'development',
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(), // 热更新插件
-    new HtmlWebpackPlugin({
-      inject: 'body',
-      title: 'React APP',
-      filename: 'index.html',
-      template: path.join(__dirname, '../src/index.html')
-    }),
-    new OpenBrowserPlugin({
-      url: `http://localhost:${PORT}/#/`,
-    }),
-  ],
-  devtool: 'eval-source-map',
-}
+    mode: 'development',
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(), // 热更新插件
+        new HtmlWebpackPlugin({
+            inject: 'body',
+            title: 'React APP',
+            filename: 'index.html',
+            template: path.join(__dirname, '../src/index.html'),
+        }),
+        new OpenBrowserPlugin({
+            url: `http://localhost:${PORT}/#/`,
+        }),
+    ],
+    devtool: 'eval-source-map',
+};
 
 module.exports = merge(webpackConfigBase, webpackConfigDev);

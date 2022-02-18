@@ -16,7 +16,7 @@ const webpackConfigProd = {
             filename: 'index.html',
             template: path.join(__dirname, '../src/index.html'),
         }),
-    ]
+    ],
 };
 
 module.exports = merge(webpackConfigBase, webpackConfigProd);

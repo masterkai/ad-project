@@ -1,13 +1,21 @@
 {
-  "env": {
-    "browser": true
-  },
-  "extends": [
-    "airbnb"
-  ],
-  "rules": {
-    "indent": ["error", 2],
-    "react/jsx-indent": ["error", 2]
-//    "react/prefer-stateless-function": ["off", 0]
-  }
+    "env": {
+        "browser": true
+    },
+    "extends": [
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/prefer-stateless-function": "off",
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "no-unused-vars": "warn",
+        "no-use-before-define": "off"
+    }
 }
